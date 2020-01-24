@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-04-10T15:02:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb3691e4-962a-4136-a6da-1361a079e93f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Dataset_Eleve" uuid="f1a0add1-c35c-4fe6-8474-4c2d445d9a97">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+		<queryString language="SQL">
+			<![CDATA[select * from eleve e,classe c,tuteur t
+where e.NUM_CLASSE=c.NUM_CLASSE and
+e.CIN=t.CIN]]>
+		</queryString>
+		<field name="ID_SALLE" class="java.math.BigDecimal"/>
+		<field name="NOM_SALLE" class="java.lang.String"/>
+		<field name="CAPACITE" class="java.math.BigDecimal"/>
+		<field name="ID_ECOLE" class="java.math.BigDecimal"/>
+		<field name="NOM_ECOLE" class="java.lang.String"/>
+		<field name="PROPRIETAIRE" class="java.lang.String"/>
+		<field name="ADRESSE_ECOLE" class="java.lang.String"/>
+		<field name="VILLE" class="java.lang.String"/>
+		<field name="CODE_POSTALE" class="java.lang.String"/>
+		<field name="EMAIL_ECOLE" class="java.lang.String"/>
+		<field name="TEL_FIXE" class="java.math.BigDecimal"/>
+		<field name="TEL_PORTABLE" class="java.math.BigDecimal"/>
+		<field name="LOGO" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from salle,ecole]]>
+	</queryString>
+	<field name="ID_SALLE" class="java.math.BigDecimal"/>
+	<field name="NOM_SALLE" class="java.lang.String"/>
+	<field name="CAPACITE" class="java.math.BigDecimal"/>
+	<field name="ID_ECOLE" class="java.math.BigDecimal"/>
+	<field name="NOM_ECOLE" class="java.lang.String"/>
+	<field name="PROPRIETAIRE" class="java.lang.String"/>
+	<field name="ADRESSE_ECOLE" class="java.lang.String"/>
+	<field name="VILLE" class="java.lang.String"/>
+	<field name="CODE_POSTALE" class="java.lang.String"/>
+	<field name="EMAIL_ECOLE" class="java.lang.String"/>
+	<field name="TEL_FIXE" class="java.math.BigDecimal"/>
+	<field name="TEL_PORTABLE" class="java.math.BigDecimal"/>
+	<field name="LOGO" class="java.lang.String"/>
+	<title>
+		<band height="380" splitType="Stretch">
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="30" width="140" height="140" uuid="d2d5cbb7-5361-49c8-9ed5-73faf307ea3f"/>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[$F{LOGO}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="30" uuid="189ce828-4aa3-46f7-b5c2-5e40a57ffc3d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Calligraphy" size="14" isBold="true"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[Ecole Primaire :  ]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement x="400" y="40" width="153" height="130" uuid="7e612781-827a-4cde-9719-7060273f4466"/>
+				<imageExpression><![CDATA["C:/Users/Mohamed El Béchir/workspace_Neon2/Projet_Version 6/Rapport/tn.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="140" y="0" width="110" height="30" forecolor="#F21C18" uuid="0440646d-43e7-418f-a66d-4aaebbda02fc"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Lucida Calligraphy" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOM_ECOLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="0" width="153" height="40" uuid="cb5bb9b8-14c0-4816-88b7-dcd8e1d37db4"/>
+				<box padding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Calligraphy" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LA République Tunnusinne ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="50" width="260" height="20" uuid="e33c5a20-d8b9-45d7-a9aa-450ac338e70d"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BP:  "+$F{CODE_POSTALE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="70" width="260" height="20" uuid="52dff0d8-b710-41dc-b0d5-de093420cbc7"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tel_Fixe: "+$F{TEL_FIXE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="90" width="260" height="20" uuid="783096fc-2c47-4939-8cdc-1ddce33f9f9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cell: "+$F{TEL_PORTABLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="110" width="260" height="20" forecolor="#0000FF" backcolor="#FFFFFF" uuid="b65fce43-aee7-410b-9b28-60cede8b95b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Email: "+$F{EMAIL_ECOLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="-6" y="197" width="553" height="20" backcolor="#EDE4E4" uuid="df4451d6-a19d-48e1-88dc-e69a5df841f0"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Calligraphy" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[La liste des Eleves de l'Ecole]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="-5" y="230" width="570" height="150" uuid="4b005da1-6457-4410-b654-219b711cd2fb">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="4893c1bb-44ee-4087-906a-5b18016f6612">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="105" uuid="48f284ee-06aa-4552-bfc7-9d8042b3551f">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="105" height="30" uuid="dbe7a688-3245-449f-afe0-9f3880e57826"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NUM_INSCRIPTION]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="105" height="30" uuid="9b9ef1c3-50fe-46a9-87c2-8a7bd3442fbb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{NUM_INSCRIPTION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="b90aa415-371b-42c7-8a29-10a45ffc8ca3">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="55" height="30" uuid="ea31e6cf-3570-408e-9bf4-bfebe8e1e08c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NOM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="55" height="30" uuid="5fcf0113-0596-434d-9db4-b76df671e6a9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{NOM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="d652ae26-2286-4488-a130-41a2007674ec">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="c9e3ec1e-55c4-4c15-806f-920f63b13c6d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PRENOM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="1a0ba02a-7800-4f72-8fd4-4eb1d0bb6664"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{PRENOM}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="dd48f7b8-875b-441a-a810-0b8a69ba22b2">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="e90dba93-65fa-49b7-804b-1d21da645888"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DATE_NAISSANCE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="2c2a99f0-1953-4851-b57f-3d3258c21e12"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DATE_NAISSANCE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="72cdb169-5ad7-428b-82d0-90a151e0df27">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="1f43ea95-08c1-4e4e-8864-d844226d09ae"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[SEXE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="b2cb735d-defc-46c8-b1e0-94d1139a2c79"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{SEXE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="64caf183-3c2c-4863-afbd-5b4feae9b782">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="f1a696fe-bbf8-4bde-8f28-74c331830948"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NOM_CLASSE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="9775c37b-95c0-4fc2-b7a3-54f77aa46a2e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{NON_CLASSE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="726051ad-14d9-4705-8af4-473fb2931498">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="f042d8f7-db05-4c77-bcf4-a82d9db5c04b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CIN_TUT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="f371fb6f-1a7b-4e37-a535-5e92b847087d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CIN}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="85a4a878-c9e9-4168-8a66-7441daaa8f22">
+						<jr:tableHeader style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="590f9a0f-96fb-4c67-b134-3471f7537c51"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NomTuteur]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="79630a76-9745-4f2b-b579-48eb3f743214"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Tahoma"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{COLUMN_15}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField pattern="dd - MMMM - yyyy   HH:mm:ss">
+				<reportElement x="-6" y="0" width="186" height="30" uuid="78ef3f2d-b957-431e-b6df-2c8b0dc12693"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="200" height="30" uuid="5428dae6-f6d1-4f67-8144-1860327ab8c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
